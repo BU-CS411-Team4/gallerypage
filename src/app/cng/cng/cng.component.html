@@ -1,0 +1,37 @@
+<form (submit)="onCreateArt(keywordInput.value, imageInput.files?.[0])">
+  <input type="text" #keywordInput>
+  <input type="file" #imageInput>
+  <button type="submit">Create Art</button>
+</form>
+
+
+
+
+
+<!-- <form (submit)="onCreateArt(keywordInput.value, imageInput.files[0])">
+  <input type="text" #keywordInput>
+  <input type="file" #imageInput>
+  <button type="submit">Create Art</button>
+</form> -->
+
+
+
+
+<!-- Add Art Form
+<form (submit)="onCreateArt(keywordInput?.value, imageInput?.files[0])">
+  <input type="text" placeholder="Keyword" #keywordInput required>
+  <input type="file" #imageInput required>
+  <button type="submit">Create Art</button>
+</form> -->
+
+
+<!-- Fetch Arts -->
+<button (click)="onFetchArts()">Fetch Arts</button>
+
+<!-- Art List -->
+<ul>
+  <li *ngFor="let art of arts">
+    {{ art.keyword }}
+    <button (click)="onDeleteArt(art.id)">Delete</button>
+  </li>
+</ul>

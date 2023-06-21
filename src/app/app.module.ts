@@ -7,6 +7,9 @@ import { NavbarComponent } from './sharepage/navbar/navbar.component';
 import { FooterComponent } from './sharepage/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CngComponent } from './cng/cng/cng.component';
+// import { ArtCreateComponent } from './art-create/art-create.component';
 
 
 @NgModule({
@@ -15,11 +18,15 @@ import { MenuComponent } from './pages/menu/menu.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    CngComponent,
+    // ArtCreateComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
